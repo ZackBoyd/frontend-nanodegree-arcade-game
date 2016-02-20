@@ -1,6 +1,18 @@
-frontend-nanodegree-arcade-game
-===============================
+Welcome to my version of the classic arcade game Frogger!
 
-Students should use this [rubric](https://www.udacity.com/course/viewer/#!/c-nd001/l-2696458597/m-2687128535) for self-checking their submission.
+How to play:
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+1) Click on link http://zackboyd.github.io/frontend-nanodegree-arcade-game
+
+2) Click 'Download .zip'
+
+3) Double click on downloaded zip file to create folder 'ZackBoyd-frontend-nanodegree-arcade-game-261ff4c'
+
+4) Open folder 'ZackBoyd-frontend-nanodegree-arcade-game-261ff4c'
+
+5) Open index.html in your web browser
+
+6) Use arrow keys to move 'left', 'right', 'up', and 'down'
+
+7) Avoid colliding with enemy bugs to reach the water
+
