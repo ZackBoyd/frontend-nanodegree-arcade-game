@@ -58,7 +58,7 @@ var Player = function() {
     this.wallChecker = {
         leftWall: false,
         rightWall: false,
-        bottomWall: true
+        bottomWall: true,
     };
     this.sprite = 'images/char-boy.png';
 }
@@ -120,7 +120,7 @@ Player.prototype.checkPosition = function() {
     } else {
         this.setHorizontalWallCheckerState(false, false);
     }
-    if (this.y === 600) {
+    if (this.y === 400) {
         this.wallChecker.bottomWall = true;
     } else {
         this.wallChecker.bottomWall = false;
@@ -135,6 +135,12 @@ Player.prototype.resetCheckPosition = function() {
 Player.prototype.setHorizontalWallCheckerState = function(leftWallState, rightWallState) {
     this.wallChecker.leftWall = leftWallState;
     this.wallChecker.rightWall = rightWallState;
+}
+
+//Define rocks class
+var Rocks = function(xPosition, yPosition) {
+    this.x = xPosition;
+    this.y = yPosition;
 }
 
 // Now instantiate your objects. 
