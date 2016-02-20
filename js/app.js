@@ -64,24 +64,24 @@ Player.prototype = {
         this.y = playerInitialY;
         this.resetCheckPosition();
     },
-    handleInput: function(keyPressed) {
+    handleInput: function(PressedKey) {
         // Key press listener, 'left', 'up', 'right', 'down' ✓
         var stepHorizontalLength = 100;
         var stepVerticalLength = 90;
         this.checkPosition();
 
-        if (keyPressed === 'left') {
+        if (PressedKey === 'left') {
             if (this.EdgeChecker.leftEdge) {}
             this.x -= stepHorizontalLength;
-        } else if (keyPressed === 'right') {
+        } else if (PressedKey === 'right') {
             if (this.EdgeChecker.rightEdge) {}
             this.x += stepHorizontalLength;
-        } else if (keyPressed === 'up') {
+        } else if (PressedKey === 'up') {
             if (this.y === 40) {
                 this.resetPlayerPosition();
             }
             this.y -= stepVerticalLength;
-        } else if (keyPressed === 'down') {
+        } else if (PressedKey === 'down') {
             if (this.EdgeChecker.bottomEdge) {}
             this.y += stepVerticalLength;
         } else {
@@ -115,11 +115,19 @@ Player.prototype = {
 
 
 // Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+
+var player = new Player();
+
+// Place all enemy objects in an array called allEnemies
 
 var allEnemies = [];
 
+// Instantiate enemies
+for (var i = 0; i < 3; i++) {
+    var tempSpeed = Math.floor(Math.random() * 5 + 1) * 75;
+    allEnemies.push(new Enemy(-60, 60 + 85 * i, tempSpeed));
+}
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
@@ -129,6 +137,6 @@ document.addEventListener('keyup', function(e) {
         39: 'right',
         40: 'down'
     };
-
-    player.handleInput(allowedKeys[e.keyCode]);
+    var PressedKey = allowedKeys[e.keyCode];
+    player.handleInput(PressedKey);
 });
