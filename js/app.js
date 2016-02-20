@@ -120,7 +120,7 @@ Player.prototype.checkPosition = function() {
     } else {
         this.setHorizontalWallCheckerState(false, false);
     }
-    if (this.y === 400) {
+    if (this.y === 600) {
         this.wallChecker.bottomWall = true;
     } else {
         this.wallChecker.bottomWall = false;
