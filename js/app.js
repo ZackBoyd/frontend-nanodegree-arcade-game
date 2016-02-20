@@ -148,7 +148,14 @@ Rock.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
-var rock = new Rock(0, 400);
+
+var allRocks = [];
+
+for (var i =0; i <1; i++) {
+    var tempX = Math.floor(Math.random() * 5) + 101;
+    var tempY = Math.floor(Math.random() * 4) * 85;
+    allRocks.push(new Rock(tempX, tempY));
+}
 
 // Now instantiate your objects. 
 // Place all enemy objects in an array called allEnemies 
