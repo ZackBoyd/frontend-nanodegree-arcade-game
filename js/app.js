@@ -152,7 +152,7 @@ Rock.prototype.render = function() {
 var allRocks = [];
 
 for (var i =0; i <1; i++) {
-    var tempX = Math.floor(Math.random() * 5) + 101;
+    var tempX = Math.floor(Math.random() * 5) * 100 + 101;
     var tempY = Math.floor(Math.random() * 4) * 85;
     allRocks.push(new Rock(tempX, tempY));
 }
